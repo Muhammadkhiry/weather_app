@@ -14,13 +14,13 @@ class DisplayWeatherInfo extends StatelessWidget {
             "Alexandria",
             style: TextStyle(
               color: Colors.black,
-              fontSize: 25,
+              fontSize: 33,
               fontWeight: FontWeight.bold,
             ),
           ),
           Text(
             "updated a : 23:46",
-            style: TextStyle(color: Colors.black, fontSize: 18),
+            style: TextStyle(color: Colors.black, fontSize: 25),
           ),
           SizedBox(height: 55),
 
@@ -34,7 +34,7 @@ class DisplayWeatherInfo extends StatelessWidget {
                 "17",
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 31,
+                  fontSize: 33,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -42,11 +42,11 @@ class DisplayWeatherInfo extends StatelessWidget {
                 children: [
                   Text(
                     "maxTemp: 17",
-                    style: TextStyle(color: Colors.black, fontSize: 13),
+                    style: TextStyle(color: Colors.black, fontSize: 15),
                   ),
                   Text(
                     "minTemp: 10",
-                    style: TextStyle(color: Colors.black, fontSize: 13),
+                    style: TextStyle(color: Colors.black, fontSize: 15),
                   ),
                 ],
               ),
@@ -57,7 +57,7 @@ class DisplayWeatherInfo extends StatelessWidget {
             "Light Rain",
             style: TextStyle(
               color: Colors.black,
-              fontSize: 25,
+              fontSize: 33,
               fontWeight: FontWeight.bold,
             ),
           ),

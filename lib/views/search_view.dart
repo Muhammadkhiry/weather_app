@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SearchView extends StatelessWidget {
-  const SearchView({super.key});
+  final TextEditingController _txtController = TextEditingController();
+  SearchView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +16,24 @@ class SearchView extends StatelessWidget {
             fontSize: 25,
             color: Colors.white,
             fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(35.0),
+        child: Center(
+          child: TextField(
+            onSubmitted: (value) {},
+            controller: _txtController,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Enter a city',
+              hintText: 'Cairo',
+              suffixIcon: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.search),
+              ),
+            ),
           ),
         ),
       ),
