@@ -11,50 +11,43 @@ The application is built following a clean Flutter architecture with **Cubit (fl
 ### Home Screen
 
 <p align="center">
-  <img src="assets/screenshot/home_view.png" width="280">
+  <img src="assets/screenshot/home_view.png" width="300">
 </p>
 
 ---
 
-### Sunny Weather
+<table align="center">
+<tr>
+<td align="center">
+<b>☀️ Sunny</b><br><br>
+<img src="assets/screenshot/sunny.png" width="280">
+</td>
 
-<p align="center">
-  <img src="assets/screenshot/sunny.png" width="280">
-</p>
+<td align="center">
+<b>☁️ Cloudy</b><br><br>
+<img src="assets/screenshot/cloudy.png" width="280">
+</td>
+</tr>
 
----
+<tr>
+<td align="center">
+<b>🌧 Light Rain</b><br><br>
+<img src="assets/screenshot/light_rain.png" width="280">
+</td>
 
-### Cloudy Weather
+<td align="center">
+<b>✨ Clear</b><br><br>
+<img src="assets/screenshot/clear.png" width="280">
+</td>
+</tr>
 
-<p align="center">
-  <img src="assets/screenshot/cloudy.png" width="280">
-</p>
-
----
-
-### Light Rain
-
-<p align="center">
-  <img src="assets/screenshot/light_rain.png" width="280">
-</p>
-
----
-
-### Clear Weather
-
-<p align="center">
-  <img src="assets/screenshot/clear.png" width="280" hight="100">
-</p>
-
----
-
-### Error State
-
-<p align="center">
-  <img src="assets/screenshot/error_message.png" width="280">
-</p>
-
----
+<tr>
+<td colspan="2" align="center">
+<b>❌ Error State</b><br><br>
+<img src="assets/screenshot/error_message.png" width="280">
+</td>
+</tr>
+</table>
 
 # ✨ Features
 
