@@ -11,7 +11,7 @@ The application is built following a clean Flutter architecture with **Cubit (fl
 ### Home Screen
 
 <p align="center">
-  <img src="screenshot/home_view.png" width="280">
+  <img src="assets/screenshot/home_view.png" width="280">
 </p>
 
 ---
@@ -19,7 +19,7 @@ The application is built following a clean Flutter architecture with **Cubit (fl
 ### Sunny Weather
 
 <p align="center">
-  <img src="screenshot/sunny.png" width="280">
+  <img src="assets/screenshot/sunny.png" width="280">
 </p>
 
 ---
@@ -27,7 +27,7 @@ The application is built following a clean Flutter architecture with **Cubit (fl
 ### Cloudy Weather
 
 <p align="center">
-  <img src="screenshot/cloudy.png" width="280">
+  <img src="assets/screenshot/cloudy.png" width="280">
 </p>
 
 ---
@@ -35,7 +35,7 @@ The application is built following a clean Flutter architecture with **Cubit (fl
 ### Light Rain
 
 <p align="center">
-  <img src="screenshot/light_rain.png" width="280">
+  <img src="assets/screenshot/light_rain.png" width="280">
 </p>
 
 ---
@@ -43,7 +43,7 @@ The application is built following a clean Flutter architecture with **Cubit (fl
 ### Clear Weather
 
 <p align="center">
-  <img src="screenshot/clear.png" width="280">
+  <img src="assets/screenshot/clear.png" width="280" hight="100">
 </p>
 
 ---
@@ -51,7 +51,7 @@ The application is built following a clean Flutter architecture with **Cubit (fl
 ### Error State
 
 <p align="center">
-  <img src="screenshot/error_message.png" width="280">
+  <img src="assets/screenshot/error_message.png" width="280">
 </p>
 
 ---
