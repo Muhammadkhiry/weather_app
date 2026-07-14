@@ -1,97 +1,90 @@
-# 🌤 Weather App
+# 🌦 Weather App
 
-A beautiful Flutter Weather Application that provides real-time weather updates using the **WeatherAPI**.
+A modern Flutter weather application that provides real-time weather information for any city using the WeatherAPI service.
 
-The application allows users to search for any city around the world and displays the current weather conditions with dynamic themes, weather illustrations, and detailed temperature information.
+The application is built following a clean Flutter architecture with **Cubit (flutter_bloc)** for state management and **Dio** for networking.
 
 ---
 
-## 📱 Screenshots
+## 📱 Preview
 
 ### Home Screen
 
 <p align="center">
-  <img src="screenshots/home_view.png" width="280">
+  <img src="screenshot/home_view.png" width="280">
 </p>
 
 ---
 
-### Weather Conditions
+### Sunny Weather
 
-<table align="center">
-<tr>
-<td align="center">
-
-#### ☀️ Sunny
-
-<img src="screenshots/sunny.png" width="220">
-
-</td>
-
-<td align="center">
-
-#### 🌧 Rainy
-
-<img src="screenshots/light_rain.png" width="220">
-
-</td>
-</tr>
-
-<tr>
-<td align="center">
-
-#### ☁️ Cloudy
-
-<img src="screenshots/cloudy.png" width="220">
-
-</td>
-
-<td align="center">
-
-#### ❌ Error State
-
-<img src="screenshots/error_message.png" width="220">
-
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="screenshot/sunny.png" width="280">
+</p>
 
 ---
 
-## ✨ Features
+### Cloudy Weather
 
-- 🌎 Search weather by city name.
-- ☀️ Current weather information.
-- 🌡 Displays:
-  - Current Temperature
-  - Minimum Temperature
+<p align="center">
+  <img src="screenshot/cloudy.png" width="280">
+</p>
+
+---
+
+### Light Rain
+
+<p align="center">
+  <img src="screenshot/light_rain.png" width="280">
+</p>
+
+---
+
+### Clear Weather
+
+<p align="center">
+  <img src="screenshot/clear.png" width="280">
+</p>
+
+---
+
+### Error State
+
+<p align="center">
+  <img src="screenshot/error_message.png" width="280">
+</p>
+
+---
+
+# ✨ Features
+
+- 🌍 Search weather by city name
+- ☀️ Current weather information
+- 🌡 Display:
   - Maximum Temperature
-- ⏰ Last updated time.
-- 🎨 Dynamic application theme based on weather condition.
-- 🖼 Dynamic weather illustrations.
-- ⚡ Fast networking using Dio.
-- 🧠 State Management using Flutter Bloc (Cubit).
-- ❌ Handles invalid city names gracefully.
-- 📱 Responsive UI.
+  - Average Temperature
+  - Minimum Temperature
+- 🕒 Last updated time
+- ☁️ Weather condition icon
+- 🎨 Dynamic application theme based on weather condition
+- ⚡ Fast API requests using Dio
+- 🔄 State management using Cubit (flutter_bloc)
+- ❌ Error handling for invalid city names
+- 🧩 Clean and organized project structure
 
 ---
 
-## 🏗 Project Structure
+# 🏗 Project Structure
 
 ```
 lib
-│
-├── components
-│   ├── display_condition_icon.dart
-│   ├── display_weather_info.dart
-│   └── no_weather_info.dart
 │
 ├── cubits
 │   └── weather_cubit
 │       ├── get_weather_cubit.dart
 │       └── get_weather_states.dart
 │
-├── model
+├── models
 │   └── weather_model.dart
 │
 ├── services
@@ -101,22 +94,36 @@ lib
 │   ├── home_view.dart
 │   └── search_view.dart
 │
+├── widgets
+│   ├── display_condition_icon.dart
+│   ├── display_weather_info.dart
+│   └── no_weather_info.dart
+│
 └── main.dart
 ```
 
 ---
 
-## 📦 Packages Used
+# 🧠 State Management
 
-| Package | Purpose |
-|----------|----------|
-| flutter_bloc | State Management |
-| bloc | Cubit Architecture |
-| dio | API Requests |
+The application uses **Cubit** from **flutter_bloc**.
+
+States:
+
+- NoWeatherState
+- LoadedWeatherState
+- WeatherFailureState
+
+The Cubit is responsible for:
+
+- Fetching weather data
+- Managing loading and error states
+- Updating the UI automatically
+- Changing the application's theme dynamically
 
 ---
 
-## 🌐 API
+# 🌐 API
 
 This project uses:
 
@@ -124,25 +131,42 @@ This project uses:
 
 https://www.weatherapi.com/
 
+Endpoint used:
+
+```
+/forecast.json
+```
+
 ---
 
-## 🎨 Dynamic UI
+# 📦 Packages Used
 
-The application changes its appearance depending on the current weather.
+| Package | Purpose |
+|---------|---------|
+| flutter_bloc | State Management |
+| bloc | Cubit |
+| dio | HTTP Requests |
+
+---
+
+# 🎨 Dynamic Theme
+
+One of the interesting features of this project is that the application theme changes automatically according to the current weather condition.
 
 Examples:
 
-| Weather | Theme |
-|---------|-------|
-| ☀️ Sunny | Amber |
-| ☁️ Cloudy | Blue Grey |
-| 🌧 Rain | Blue |
-| ❄️ Snow | Light Blue |
-| ⛈ Thunder | Deep Purple |
+- ☀️ Sunny → Amber
+- ☁️ Cloudy → Blue Grey
+- 🌧 Rain → Blue
+- ❄️ Snow → Cyan
+- ⛈ Thunderstorm → Deep Purple
+- 🌫 Fog → Grey
+
+This makes the application feel more dynamic and visually engaging.
 
 ---
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 
 Clone the repository
 
@@ -150,13 +174,7 @@ Clone the repository
 git clone https://github.com/Muhammadkhiry/weather_app.git
 ```
 
-Go to the project
-
-```bash
-cd weather_app
-```
-
-Install packages
+Install dependencies
 
 ```bash
 flutter pub get
@@ -170,48 +188,26 @@ flutter run
 
 ---
 
-## 📖 What I Learned
+# 📌 Future Improvements
 
-Throughout this project I practiced:
-
-- REST APIs
-- JSON Parsing
-- Dio Package
-- Flutter Bloc (Cubit)
-- State Management
-- Dynamic Themes
-- Responsive UI
-- Clean Project Structure
-- Error Handling
-- Async Programming
-- Network Image Loading
+- 📍 Current location support (GPS)
+- 🗓 7-day forecast
+- ⏰ Hourly forecast
+- ❤️ Favorite cities
+- 🌙 Dark Mode
+- 🌡 Temperature unit switching (°C / °F)
+- 🌍 Multi-language support
+- 💾 Local caching
 
 ---
 
-## 💡 Future Improvements
+# 👨‍💻 Author
 
-- 7-Day Weather Forecast
-- Hourly Forecast
-- Location Services (GPS)
-- Search History
-- Favorite Cities
-- Dark Mode
-- Weather Animations
-- Offline Cache
-
----
-
-## 👨‍💻 Author
-
-### Muhammad Khiry
-
-Computer and Systems Engineering Student
+**Muhammad Khiry**
 
 GitHub:
 https://github.com/Muhammadkhiry
 
 ---
 
-## ⭐ If you like this project
-
-Please consider giving it a **Star ⭐** on GitHub.
+## ⭐ If you like this project, don't forget to leave a star on the repository!

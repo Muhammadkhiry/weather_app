@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/components/display_condition_icon.dart';
+import 'package:weather_app/widgets/display_condition_icon.dart';
 import 'package:weather_app/main.dart';
-import 'package:weather_app/model/weather_model.dart';
+import 'package:weather_app/models/weather_model.dart';
 
 class DisplayWeatherInfo extends StatelessWidget {
   const DisplayWeatherInfo({super.key, required this.model});
