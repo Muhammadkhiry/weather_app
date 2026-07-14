@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/model/weather_model.dart';
-import 'package:weather_app/services/weather_service.dart';
 
 class SearchView extends StatelessWidget {
   final TextEditingController _txtController = TextEditingController();
@@ -26,9 +24,7 @@ class SearchView extends StatelessWidget {
         child: Center(
           child: TextField(
             onSubmitted: (value) async {
-              WeatherModel model = await WeatherService().getData(
-                cityName: value,
-              );
+             
               Navigator.pop(context);
             },
             controller: _txtController,
