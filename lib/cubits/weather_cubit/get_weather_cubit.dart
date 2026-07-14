@@ -10,7 +10,7 @@ class GetWeatherCubit extends Cubit<WeatherStates> {
     try {
       // ignore: unused_local_variable
       WeatherModel model = await WeatherService().getData(cityName: cityName);
-      emit(LoadedWeatherState());
+      emit(LoadedWeatherState(weatherModel: model));
     } catch (e) {
       emit(WeatherFailureState());
     }

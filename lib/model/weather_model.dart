@@ -1,7 +1,7 @@
 class WeatherModel {
-  final String cityName, updatedDate, condition, iconCondition;
+  final String cityName, condition, iconCondition;
   final double minTemp, avgTemp, maxTemp;
-
+  String updatedDate;
   WeatherModel({
     required this.cityName,
     required this.updatedDate,

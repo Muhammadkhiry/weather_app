@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/components/display_condition_icon.dart';
+import 'package:weather_app/model/weather_model.dart';
 
 class DisplayWeatherInfo extends StatelessWidget {
-  const DisplayWeatherInfo({super.key});
+  const DisplayWeatherInfo({super.key, required this.model});
+  final WeatherModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +14,7 @@ class DisplayWeatherInfo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Alexandria",
+            model.cityName,
             style: TextStyle(
               color: Colors.black,
               fontSize: 33,
@@ -19,7 +22,7 @@ class DisplayWeatherInfo extends StatelessWidget {
             ),
           ),
           Text(
-            "updated a : 23:46",
+            "last update: ${DateTime.parse(model.updatedDate).hour}:${DateTime.parse(model.updatedDate).minute}",
             style: TextStyle(color: Colors.black, fontSize: 25),
           ),
           SizedBox(height: 55),
@@ -29,9 +32,9 @@ class DisplayWeatherInfo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("assets/images/rainy.png"),
+              DisplayConditionIcon(condition: model.condition),
               Text(
-                "17",
+                "${model.avgTemp}",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 33,
@@ -41,11 +44,11 @@ class DisplayWeatherInfo extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    "maxTemp: 17",
+                    "${model.maxTemp}",
                     style: TextStyle(color: Colors.black, fontSize: 15),
                   ),
                   Text(
-                    "minTemp: 10",
+                    "${model.minTemp}",
                     style: TextStyle(color: Colors.black, fontSize: 15),
                   ),
                 ],
@@ -54,7 +57,7 @@ class DisplayWeatherInfo extends StatelessWidget {
           ),
           SizedBox(height: 51),
           Text(
-            "Light Rain",
+            model.condition,
             style: TextStyle(
               color: Colors.black,
               fontSize: 33,
