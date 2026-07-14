@@ -13,7 +13,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff2092EF),
+        elevation: 0,
         title: Text(
           "Weather updates",
           style: TextStyle(
@@ -46,7 +46,7 @@ class HomeView extends StatelessWidget {
           if (state is WeatherInitialState) {
             return NoWeatherInfo();
           } else if (state is LoadedWeatherState) {
-            return DisplayWeatherInfo(model: state.weatherModel,);
+            return DisplayWeatherInfo(model: state.weatherModel);
           } else {
             return Center(
               child: Text(

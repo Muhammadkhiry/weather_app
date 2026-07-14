@@ -1,7 +1,7 @@
 class WeatherModel {
   final String cityName, condition, iconCondition;
   final double minTemp, avgTemp, maxTemp;
-  String updatedDate;
+  final DateTime updatedDate;
   WeatherModel({
     required this.cityName,
     required this.updatedDate,
@@ -15,7 +15,7 @@ class WeatherModel {
   factory WeatherModel.fromJson(Map<String, dynamic> json) {
     return WeatherModel(
       cityName: json["location"]["name"],
-      updatedDate: json["current"]["last_updated"],
+      updatedDate: DateTime.parse(json["current"]["last_updated"]),
       condition: json["current"]["condition"]["text"],
       iconCondition: "https:${json["current"]["condition"]["icon"]}",
       minTemp: json["forecast"]["forecastday"][0]["day"]["mintemp_c"],
